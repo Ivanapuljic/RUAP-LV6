@@ -12,7 +12,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace zad1
+namespace CallRequestResponseService
 {
 
     public class StringTable
@@ -43,13 +43,14 @@ namespace zad1
                                 ColumnNames = new string[] {"MPG", "Cyl", "Displacement", "Horsepower", "Weight", "Acceleration", "Year", "CountryCode", "Model"},
                                 Values = new string[,] {  { "0", "0", "0", "0", "0", "0", "0", "0", "value" },  { "0", "0", "0", "0", "0", "0", "0", "0", "value" },  }
                             }
+
                         },
                     },
                     GlobalParameters = new Dictionary<string, string>()
                     {
                     }
                 };
-                const string apiKey = "abc123"; // Replace this with the API key for the web service
+                const string apiKey = "W2c+sTcWReBKr7GlW6chORiGzx/NEyk0SrFDKVjDE4eknr3bQueQbqdzw4HEWnr2lNqduSrmlIh0y19xwfmb9A=="; // Replace this with the API key for the web service
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
 
                 client.BaseAddress = new Uri("https://ussouthcentral.services.azureml.net/workspaces/d89e264614a74175aa2e37a08e46d1ea/services/7cb8ff70f8284cb6997108a56e339384/execute?api-version=2.0&details=true");
